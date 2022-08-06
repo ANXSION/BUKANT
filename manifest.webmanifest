@@ -1,0 +1,26 @@
+{
+	"dir": "ltr",
+	"lang": "en",
+	"name": "ANXSION",
+	"short_name": "ANXSION",
+	"scope": "/",
+	"display": "standalone",
+	"start_url": "/",
+	"background_color": "#FFFFFF",
+	"theme_color": "black",
+	"description": "Description",
+	"orientation": "any",
+	"prefer_related_applications": "false",
+	"icons":[{
+		"src": "image/pwa/",
+		"type": "image/png",
+		"sizes": "192x192",
+		"purpose": "any maskable"
+	}
+	{
+		"src": "image/pwa/",
+		"type": "image/png",
+		"sizes": "512x512",
+		"purpose": "any maskable"
+	}]
+}
