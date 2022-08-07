@@ -44,11 +44,36 @@
 	</nav>
 
 	<div id="categories">
-		<h1>Books</h1>
-		<h1>Author</h1>
-		<h1>Test</h1>
-		<h1>Test</h1>
-		<h1>Test</h1>
+		<div class="categoriesContainer" onclick="categoryExtend('book')">
+			<div class="categoriesHeader">
+				<h1>Books</h1>
+				<div class="categoriesExtender">
+					<div id="categoriesExtenderBar1"></div>
+					<div id="categoriesExtenderBar2"></div>
+				</div>
+			</div>
+			<div id="bookCategory" class="categoriesSub">
+				<p>Fiction</p>
+				<p>Non-Fiction</p>
+				<p>Children</p>
+				<p>View All</p>
+			</div>
+		</div>
+		<div class="categoriesContainer" onclick="categoryExtend('author')">
+			<div class="categoriesHeader">
+				<h1>Authors</h1>
+				<div class="categoriesExtender">
+					<div id="categoriesExtenderBar1"></div>
+					<div id="categoriesExtenderBar2"></div>
+				</div>
+			</div>
+			<div id="authorCategory" class="categoriesSub">
+				<p>Name 1</p>
+				<p>Name 2</p>
+				<p>Name 3</p>
+				<p>View All</p>
+			</div>
+		</div>
 	</div>
 
 	<main>
