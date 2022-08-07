@@ -100,7 +100,7 @@ nav{
     position: relative;
 }
 
-#categoriesExtenderBar1{
+.categoriesExtenderBar1{
     position: absolute;
     width: 18px;
     height: 2px;
@@ -112,7 +112,7 @@ nav{
     transform: rotate(0) translate(0,0);
     transform-origin: center;
 }
-#categoriesExtenderBar2{
+.categoriesExtenderBar2{
     position: absolute;
     width: 18px;
     height: 2px;
