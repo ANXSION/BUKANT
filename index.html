@@ -22,6 +22,7 @@
 	<link rel="canonical" href="https://www.bukant.com/" />
 	<link rel="manifest" href="manifest.webmanifest" />
 	<link rel="stylesheet" href="css/style.css" type="text/css" />
+	<link rel="stylesheet" href="css/iconBuffer.css" type="text/css" />
 	<link rel="preload" href="css/style.css" as="style" />
 	<link rel="shortcut icon" href="image/" type="image/x-icon" />
 	<link rel="apple-touch-icon" href="image/" />
@@ -29,66 +30,33 @@
 </head>
 
 <body>
-	
 	<nav id="navigation">
-		<div id="menu" onclick="navigationDraw()">
-			<div id="bar1"></div>
-			<div id="bar2"></div>
-			<div id="bar3"></div>
+		<div class="navigationContainer">
+			<div id="menu" onclick="navigationDraw()">
+				<div id="bar1"></div>
+				<div id="bar2"></div>
+				<div id="bar3"></div>
+			</div>
 		</div>
-		<img class="logoOfficial" src="" alt="The official logo of Bukant.">
+		<div class="navigationContainer">
+			<div class="logoOfficial"></div>
+		</div>
 	</nav>
-	
-	<div>
-	
-		<div class="categorySection">
-			<div class="categoryContainer">
-			</div>
-		</div>
 
-		<div class="blogSection">
-			<h1>Catch up with our blog</h1>
-			<div class="blogContainer">
-				<img src="" alt="Blog image description">
-				<h2>Blog Description</h2>
-				<p>Read</p>
-			</div>
-		</div>
-
-		<div class="bookSection">
-			<h1>latest Titles</h1>
-			<div class="bookContainer">
-				<img src="" alt="Book description">
-				<h2>Book</h2>
-				<p>Author</p>
-			</div>
-		</div>
-
-		<div class="authorSection">
-			<h1>Featured Author</h1>
-			<div class="authorContainer">
-				<img src="" alt="Author name">
-				<h2>Author name</h2>
-				<p>View Works</p>
-			</div>
-		</div>
-				
+	<div id="categories">
+		<h1>Books</h1>
+		<h1>Author</h1>
+		<h1>Test</h1>
+		<h1>Test</h1>
+		<h1>Test</h1>
 	</div>
-	
+
+	<main>
+
+	</main>
 	<footer>
 		<p>&copy; 2022 BUKANT</p>
 	</footer>
-  
-<script>
-	window.addEventListener("load", () => {
-		if ("serviceWorker" in navigator) {
-		navigator.serviceWorker.register("serviceworker.js");
-		}
-	});
-
-
-</script>
-			
 </body>
 
 </html>
