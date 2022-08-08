@@ -21,7 +21,7 @@ function navigationDraw(){
         document.getElementById("bar1").style.transform="rotate(0) translate( 0, 0)";
         document.getElementById("bar2").style.opacity="100%";
         document.getElementById("bar3").style.transform="rotate(0) translate( 0, 0)";
-        document.getElementById("categories").style.left="-50%";
+        document.getElementById("categories").style.left="-100%";
         document.getElementById("layerHider").style.opacity="0";
         document.getElementById("body").style.overflowY="scroll";
         setTimeout(function(){ 
@@ -38,6 +38,7 @@ function categoryExtend(categoryType){
             document.getElementById("bookCategoryIcon2").style.transform="rotate(0)";
             document.getElementById("bookCategoryIcon1").style.backgroundColor="darkturquoise";
             document.getElementById("bookCategoryIcon2").style.backgroundColor="darkturquoise";
+            document.getElementById("categoriesHeaderBook").style.color="darkturquoise";
             categoryBookExtended=1;
         }
         else{
@@ -45,6 +46,7 @@ function categoryExtend(categoryType){
             document.getElementById("bookCategoryIcon2").style.transform="rotate(90deg)";
             document.getElementById("bookCategoryIcon1").style.backgroundColor="black";
             document.getElementById("bookCategoryIcon2").style.backgroundColor="black";
+            document.getElementById("categoriesHeaderBook").style.color="black";
             categoryBookExtended=0;
         }
     }
@@ -54,6 +56,7 @@ function categoryExtend(categoryType){
             document.getElementById("authorCategoryIcon2").style.transform="rotate(0)";
             document.getElementById("authorCategoryIcon1").style.backgroundColor="darkturquoise";
             document.getElementById("authorCategoryIcon2").style.backgroundColor="darkturquoise";
+            document.getElementById("categoriesHeaderAuthor").style.color="darkturquoise";
             categoryAuthorExtended=1;
         }
         else{
@@ -61,6 +64,7 @@ function categoryExtend(categoryType){
             document.getElementById("authorCategoryIcon2").style.transform="rotate(90deg)";
             document.getElementById("authorCategoryIcon1").style.backgroundColor="black";
             document.getElementById("authorCategoryIcon2").style.backgroundColor="black";
+            document.getElementById("categoriesHeaderAuthor").style.color="black";
             categoryAuthorExtended=0;
         }
     }
@@ -70,6 +74,7 @@ function categoryExtend(categoryType){
             document.getElementById("aboutCategoryIcon2").style.transform="rotate(0)";
             document.getElementById("aboutCategoryIcon1").style.backgroundColor="darkturquoise";
             document.getElementById("aboutCategoryIcon2").style.backgroundColor="darkturquoise";
+            document.getElementById("categoriesHeaderAbout").style.color="darkturquoise";
             categoryAboutExtended=1;
         }
         else{
@@ -77,6 +82,7 @@ function categoryExtend(categoryType){
             document.getElementById("aboutCategoryIcon2").style.transform="rotate(90deg)";
             document.getElementById("aboutCategoryIcon1").style.backgroundColor="black";
             document.getElementById("aboutCategoryIcon2").style.backgroundColor="black";
+            document.getElementById("categoriesHeaderAbout").style.color="black";
             categoryAboutExtended=0;
         }
     }

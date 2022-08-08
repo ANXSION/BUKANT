@@ -30,35 +30,17 @@
 </head>
 
 <body id="body">
-	<nav id="navigationMobile">
-		<div class="navigationContainerMobile">
+
+	<nav id="navigation">
+		<div class="navigationContainer">
 			<div id="menu" onclick="navigationDraw()">
 				<div id="bar1"></div>
 				<div id="bar2"></div>
 				<div id="bar3"></div>
 			</div>
 		</div>
-		<div class="navigationContainerMobile">
+		<div class="navigationContainer">
 			<div class="logoOfficial"></div>
-		</div>
-	</nav>
-
-	<nav id="navigationMain">
-		<div class="navigationSection">
-			<div class="navigationContainerMain">
-				<div class="logoOfficial"></div>
-			</div>
-		</div>
-		<div class="navigationSection">
-			<div class="navigationContainerMain">
-				<h1>Books</h1>
-			</div>
-			<div class="navigationContainerMain">
-				<h1>Author</h1>
-			</div>
-			<div class="navigationContainerMain">
-				<h1>About us</h1>
-			</div>
 		</div>
 	</nav>
 
@@ -66,7 +48,7 @@
 
 	<div id="categories">
 		<div class="categoriesHeader" onclick="categoryExtend('book')">
-			<h1>Books</h1>
+			<h1 id="categoriesHeaderBook">Books</h1>
 			<div class="categoriesExtender">
 				<div id="bookCategoryIcon1" class="categoriesExtenderBar1"></div>
 				<div id="bookCategoryIcon2" class="categoriesExtenderBar2"></div>
@@ -79,7 +61,7 @@
 			<p>View All</p>
 		</div>
 		<div class="categoriesHeader" onclick="categoryExtend('author')">
-			<h1>Author</h1>
+			<h1 id="categoriesHeaderAuthor">Author</h1>
 			<div class="categoriesExtender">
 				<div id="authorCategoryIcon1" class="categoriesExtenderBar1"></div>
 				<div id="authorCategoryIcon2" class="categoriesExtenderBar2"></div>
@@ -92,7 +74,7 @@
 			<p>View All</p>
 		</div>
 		<div class="categoriesHeader" onclick="categoryExtend('about')">
-			<h1>About us</h1>
+			<h1 id="categoriesHeaderAbout">About us</h1>
 			<div class="categoriesExtender">
 				<div id="aboutCategoryIcon1" class="categoriesExtenderBar1"></div>
 				<div id="aboutCategoryIcon2" class="categoriesExtenderBar2"></div>
@@ -111,9 +93,8 @@
 	<main id="mainContent">
 
 	</main>
-	<footer>
-		<p>&copy; 2022 BUKANT</p>
-	</footer>
+
+	<footer></footer>
 </body>
 
 </html>
