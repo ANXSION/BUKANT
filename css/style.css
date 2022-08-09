@@ -148,7 +148,7 @@ section h1{
 }
 
 .cardsCover{
-    background: radial-gradient(circle, darkturquoise 0%, black 100%);
+    background: black;
     position: absolute;
     width: 100%;
     height: 100%;
