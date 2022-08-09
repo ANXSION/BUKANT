@@ -62,7 +62,7 @@ section{
     margin-top: 12px;
     margin-bottom: 12px;
     width: 100%;
-    height: calc(58vh);
+    height: 18.5rem;
     background-color: black;
     display: flex;
     flex-direction: column;
@@ -93,6 +93,7 @@ section{
     align-items: center;
     color: white;
     margin: 12px;
+    border-radius: 8px;
 }
 .cardsDetail{
     width: 90%;
