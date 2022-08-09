@@ -139,8 +139,8 @@ section h1{
 }
 
 .cards:hover .cardsCover{
-    filter: blur(4px);
-    opacity: 80%;
+    filter: blur(2px);
+    opacity: 20%;
 }
 
 .cards:hover .cardsDetail{
@@ -148,7 +148,7 @@ section h1{
 }
 
 .cardsCover{
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    background: radial-gradient(circle, darkturquoise 0%, black 100%);
     position: absolute;
     width: 100%;
     height: 100%;
@@ -196,8 +196,8 @@ section h1{
     width: 100%;
     height: 24px;
     margin-bottom: 12px;
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
     border: none;
     border-radius: 22px;
 }
