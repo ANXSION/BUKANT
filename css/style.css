@@ -108,7 +108,6 @@ section{
 }
 
 section h1{
-    align-self: start;
     padding-left: 12px;
     padding-right: 12px;
 }
@@ -140,7 +139,7 @@ section h1{
 }
 
 .cards:hover .cardsCover{
-    filter: blur(32px);
+    filter: blur(4px);
     opacity: 80%;
 }
 
