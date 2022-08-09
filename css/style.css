@@ -6,7 +6,7 @@ h1{
     font-weight: normal;
 }
 
-body{
+#body{
     height: 100%;
     width: 100%;
     margin: 0;
@@ -14,11 +14,10 @@ body{
     -webkit-tap-highlight-color: transparent;
     outline: none;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    overflow:scroll;
+    overflow-y:scroll;
     overflow-x: hidden;
     box-sizing: border-box;
 }
-
 
 nav{
     height: 48px;
@@ -28,32 +27,69 @@ nav{
     flex-direction: row;
     justify-content: space-between;
     color: white;
-    z-index: 1;
+    z-index: 2;
     position: fixed;
     top: 0;
 }
+
 nav p{
     margin: 12px;
-    z-index: 2;
+    z-index: 4;
+}
+nav img{
+    margin: 12px;
+    filter: invert(100%);
+    z-index: 4;
 }
 
-.categoriesMobile{
+.menu{
+    margin: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+    
+}
+#menubar1{
+    background-color: white;
+    width: 18px;
+    height: 2px;
+    margin: 2px;
+    transform-origin: center;
+    transform: rotate(0) translate(0);
+    transition: all 0.3s;
+}
+#menubar2{
+    background-color: white;
+    margin: 2px;
+    width: 18px;
+    height: 2px;
+    transform-origin: center;
+    transform: rotate(0) translate(0);
+    transition: all 0.3s;
+}
+
+#categoriesMobile{
     height: 100%;
     width: 100%;
-    display: none;
+    margin-top: 48px;
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items:center;
     color: white;
     background-color: black;
     position: fixed;
+    top: 100%;
+    transition: all 0.3s;
+    z-index: 3;
 }
 
 main{
     margin-top: 48px;
     width: 100%;
     min-height: calc(100vh - 96px);
-    background-color:gray;
     display: flex;
     flex-direction:column;
 }
@@ -63,17 +99,22 @@ section{
     margin-bottom: 12px;
     width: 100%;
     height: 18.5rem;
-    background-color: black;
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items:center ;
-    color: white;
+    color: black;
+}
+
+section h1{
+    align-self: start;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
 .rails{
     width: 100%;
-    height: 80%;
     background-color: white;
     display: flex;
     flex-direction: row;
@@ -85,29 +126,77 @@ section{
 
 .cards{
     width: 8.25rem;
+    min-width: 8.25rem;
     height: 13.2rem;
-    background-color: black;
+    background-color: white;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     color: white;
     margin: 12px;
     border-radius: 8px;
+    position: relative;
 }
-.cardsDetail{
-    width: 90%;
-    font-size: 0.75rem;
+
+.cards:hover .cardsCover{
+    filter: blur(32px);
+    opacity: 80%;
+}
+
+.cards:hover .cardsDetail{
+    opacity: 100%;
+}
+
+.cardsCover{
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    margin: 12px;
+    border-radius: 8px;
+    filter: blur(0);
+    z-index: 0;
+    transition: all 0.5s;
+}
+
+.cardsDetail{
+    color: black;
+    z-index: 1;
+    font-size: 0.75rem;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center;
+    opacity: 0%;
+    transition: all 0.3s;
+}
+
+.cardsDetailAlpha{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
     align-items:flex-start;
+}
+.cardsDetailBeta{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    align-items:center;
 }
 
 .cardsButton{
     width: 100%;
     height: 24px;
-    margin-bottom: 4px;
+    margin-bottom: 12px;
     background-color: white;
     color: black;
     border: none;
@@ -121,7 +210,18 @@ footer{
     justify-content: center;
     align-items: center;
 }
+
 footer::before{
     font-size: 0.875rem;
     content: "Copyright \00a9   2022 BUKANT";
+}
+
+@media screen and (min-width:769px) {
+    .rails{
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        justify-content:space-around;
+        align-items:center ;
+        overflow: hidden;
+    }
 }
