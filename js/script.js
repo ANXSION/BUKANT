@@ -1,4 +1,14 @@
 var drawerStatus = false;
+var loginStatus;
+if (loginStatus){
+    loginStatus=localStorage.getItem('_loginStatus');
+}
+else{
+    localStorage.setItem('_loginStatus','false');
+    loginStatus=localStorage.getItem('_loginStatus');
+}
+var user=["admin","admin"];
+console.log(loginStatus);
 
 function openDrawer(){
     if(drawerStatus==false){
@@ -16,5 +26,19 @@ function openDrawer(){
         document.getElementById("body").style.overflowY="scroll";
 
         drawerStatus=false;
+    }
+}
+
+function addToCart(){
+    console.log(loginStatus);
+    if (loginStatus=="false"){
+        var col =document.querySelectorAll(".cardsAdd");
+        col.forEach((lacksLogin) => {
+            lacksLogin.style.animation="cardNudge 1s";
+            setTimeout(function(){lacksLogin.style.animation="none";},500);
+          });
+    }
+    else{
+
     }
 }
