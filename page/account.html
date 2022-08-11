@@ -34,8 +34,8 @@
 			<div id="menubar1"></div>
 			<div id="menubar2"></div>
 		</div>
-		<p>BUKANT</p>
-		<div class="cartIconContainer">
+		<p onclick="home(1)">BUKANT</p>
+		<div id="cartIconContainer" onclick="window.open('cart.html','_parent')">
 			<div class="cartCounter">
 				<p id="cartCounterDisplay">1</p>
 			</div>
@@ -48,15 +48,42 @@
 		<p>Author +</p>
 		<p>About us +</p>
 		<p>Arts and Craft +</p>
+		<a href="account.html">Account</a>
 	</div>
 
 	<main>
-		
-
+		<section id="loginForm">
+			<div >
+				<label for="username">Username:</label><br>
+				<input type="text" id="username" name="username"><br>
+				<label for="password">Password:</label><br>
+				<input type="password" id="password" name="password"><br><br>
+				<button onclick="accessAccount()">LOGIN</button>
+				<p id="invalidUsername">* Your Username Does not exist.</p>
+				<p id="invalidPassword">* The password you entered is not correct.</p>
+			</div>	
+		</section>
+		<section id="loggedIn">
+			<div >
+				<p>Hey You are Logged in!</p>
+				<button onclick="logout()">Logout</button>
+			</div>
+		</section>		
 	</main>
 
 	<footer></footer>
 	
+	<script>
+		var auth = localStorage.getItem("_loginStatus");
+		if(auth=="true"){
+			document.getElementById("loginForm").style.display="none";
+			document.getElementById("loggedIn").style.display="flex";
+		}
+		else{
+			document.getElementById("loginForm").style.display="flex";
+			document.getElementById("loggedIn").style.display="none";
+		}
+	</script>
 </body>
 
 </html>

@@ -30,17 +30,21 @@
 
 <body id="body">
 	<nav>
+
 		<div class="menu" onclick="openDrawer()">
 			<div id="menubar1"></div>
 			<div id="menubar2"></div>
 		</div>
-		<p>BUKANT</p>
-		<div class="cartIconContainer">
+
+		<p onclick="home(1)">BUKANT</p>
+
+		<div id="cartIconContainer" onclick="window.open('cart.html','_parent')">
 			<div class="cartCounter">
 				<p id="cartCounterDisplay">1</p>
 			</div>
 			<img src ="../asset/icon/myCart.svg" alt="My Cart Svg"/>
 		</div>
+
 	</nav>
 
 	<div id="categoriesMobile">
@@ -48,11 +52,13 @@
 		<p>Author +</p>
 		<p>About us +</p>
 		<p>Arts and Craft +</p>
+		<a href="account.html">Account</a>
 	</div>
 
 	<main>
-		
-
+		<section>
+			<h1>Your cart is empty</h1>
+		</section>
 	</main>
 
 	<footer></footer>
