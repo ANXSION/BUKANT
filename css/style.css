@@ -39,6 +39,8 @@ nav{
 
 nav p{
     margin: 1rem;
+    cursor: pointer;
+    user-select: none;
 }
 
 
@@ -71,6 +73,7 @@ nav p{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    user-select: none;
     
 }
 .cartCounter p{
@@ -144,7 +147,6 @@ section{
     margin-top: 12px;
     margin-bottom: 12px;
     width: 100%;
-    min-height: 18.5rem;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -218,6 +220,7 @@ section h1{
     border-radius: 22px;
     background-color: black;
     color: white;
+    cursor: pointer;
 }
 
 @keyframes cardNudge {
@@ -289,10 +292,93 @@ footer::before{
     color: red;
     display:none;
 }
+#invalidRegUsername{
+    color: red;
+    display:none;
+
+}
+#invalidRegPassword{
+    color: red;
+    display:none;
+}
 
 #loginForm{
+    max-width: 375px;
+    width: 100%;
+    margin:28px;
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+#regForm{
+    max-width: 375px;
+    width: 100%;
+    margin:28px;
+    display: Flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
 }
 #loggedIn{
+    width: 100%;
     display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.useridContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#useridImage{
+    width: 92px;
+    width: 92px;
+    min-width: 92px;
+    min-height: 92px;
+    border-radius: 50%;
+    background-color: green;
+}
+.useridContainerL{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.useridContainerR{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.ebook{
+    min-width: 8.25rem;
+    min-height: 13.2rem;
+    height: fit-content;
+    margin: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.accountButton{
+    line-height: 1rem;
+    width: 50%;
+    margin: 8px;
+    padding: 4px;
+    border: none;
+    border-radius: 22px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
 }

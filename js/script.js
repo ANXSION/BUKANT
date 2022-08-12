@@ -1,7 +1,12 @@
 var bookId=0;
 var bookLog=["Book 1", "Author 1", 150] ["Book 2", "Author 2", 200];
-
+var currenttime= new Date()/1000;
 var loginStatus;
+var switchAccountId;
+
+var users=[["admin","admin","@admin","admin","admin@admin.localhost","red"],["bukant", "bukant","@BUKANT","Bukant", "www.bukant.com", "darkturquoise"]];
+localStorage.setItem("_users", JSON.stringify(users))
+localStorage.setItem("_usercount", "2");
 var level;
 
 if (localStorage.getItem("_loginStatus")){
@@ -9,15 +14,15 @@ if (localStorage.getItem("_loginStatus")){
 }
 else{
     localStorage.setItem("_loginStatus","false");
+    localStorage.setItem("_loginAccess","0");
+    localStorage.setItem("_username", "null");
+    localStorage.setItem("_name", "null");
+    localStorage.setItem("_email", "null");
+    localStorage.setItem("_userimage", "NULL");
     loginStatus=localStorage.getItem("_loginStatus");
 }
 
 var drawerStatus = false;
-
-
-var bookName, BookAuthor, bookCount, bookAmount;
-
-var user=["admin","admin"];
 
 function openDrawer(){
     if(drawerStatus==false){
@@ -39,7 +44,6 @@ function openDrawer(){
 }
 
 function accessCart(){
-    console.log(loginStatus);
     if (loginStatus=="false"){
         document.getElementById("cartIconContainer").style.animation="cardNudge 1s";
         setTimeout(function(){
@@ -52,7 +56,6 @@ function accessCart(){
 }
 
 function AddToCart(){
-    console.log(loginStatus);
     if (loginStatus=="false"){
         accessCart();
     }
@@ -74,18 +77,66 @@ function home(level){
 function accessAccount(){
     var getUsername=document.getElementById("username").value;
     var getPassword=document.getElementById("password").value;
+    var count=localStorage.getItem("_usercount");
 
-    if (getUsername=="admin"){
-        if(getPassword=="admin"){
-            localStorage.setItem("_loginStatus","true");
-            location.reload();
+    var Dat=JSON.parse(localStorage.getItem("_users"));
+
+    console.log(Dat);
+    console.log(count);
+
+    for (var codei=0;codei<count;codei++){
+        document.getElementById("invalidUsername").style.display="none";
+        document.getElementById("invalidPassword").style.display="none";
+        console.log("Loop");
+        if (getUsername==Dat[codei][0]){
+            if (getPassword==Dat[codei][1]){
+                localStorage.setItem("_loginStatus","true");
+                localStorage.setItem("_loginAccess",codei);
+                location.reload();
+            }
+            else{
+                document.getElementById("invalidPassword").style.display="flex";
+            }
         }
         else{
-            document.getElementById("invalidPassword").style.display="flex";
+            document.getElementById("invalidUsername").style.display="flex";
         }
     }
-    else{
-        document.getElementById("invalidUsername").style.display="flex";
+}
+
+function registerAccount(){
+    var getRegemail=document.getElementById("Regemail").value;
+    var getRegUsername=document.getElementById("Regusername").value;
+    var getRegPassword1=document.getElementById("Regpassword1").value;
+    var getRegPassword2=document.getElementById("Regpassword2").value;
+    var RegDat=JSON.parse(localStorage.getItem("_users"));
+
+    document.getElementById("invalidRegUsername").style.display="none";
+
+    for (var i =0; i<=parseInt(localStorage.getItem("_usercount"));i++){
+        if(getRegUsername==RegDat[i][0]){
+            document.getElementById("invalidRegUsername").style.display="flex";
+            break;
+        }
+    }
+}
+
+function switchAccount(switchAccountId){
+    if(switchAccountId=="login"){
+        document.getElementById("regForm").style.display="none";
+        document.getElementById("loginForm").style.opacity="0";
+        document.getElementById("loginForm").style.display="flex";
+        setTimeout(() => {
+            document.getElementById("loginForm").style.opacity="100%";
+        }, 500);
+    }
+    else if(switchAccountId=="register"){
+        document.getElementById("loginForm").style.display="none";
+        document.getElementById("regForm").style.opacity="0";
+        document.getElementById("regForm").style.display="flex";
+        setTimeout(() => {
+            document.getElementById("regForm").style.opacity="100%";
+        }, 500);
     }
 }
 
