@@ -35,9 +35,9 @@
 			<div id="menubar2"></div>
 		</div>
 		<p onclick="home(1)">BUKANT</p>
-		<div id="cartIconContainer" onclick="accessCart()">
-			<div class="cartCounter">
-				<p id="cartCounterDisplay">1</p>
+		<div id="cartIconContainer" onclick="accessCart(2)">
+			<div id="cartCounter">
+				<p id="cartCounterDisplay"></p>
 			</div>
 			<img src ="../asset/icon/myCart.svg" alt="My Cart Svg"/>
 		</div>
@@ -101,7 +101,7 @@
 					<div>
 						<div class="bookCount">
 							<p>Books Purchased</p>
-							<p id="booksOwned">10</p>
+							<p id="booksOwned">9</p>
 						</div>
 					</div>
 				</div>
@@ -132,13 +132,11 @@
 	<script>
 		var auth = localStorage.getItem("_loginStatus");
 		var accessCode=parseInt(localStorage.getItem("_loginAccess"));
-		console.log(accessCode);
 		var userData=JSON.parse(localStorage.getItem("_users"));
 		if(auth=="true"){
 			document.getElementById("loginForm").style.display="none";
 			document.getElementById("loggedIn").style.display="flex";
 			document.getElementById("insertUsername").textContent=userData[accessCode][2];
-			console.log(userData[accessCode][2]);
 			document.getElementById("insertName").textContent=userData[accessCode][3];;
 			document.getElementById("insertEmail").textContent=userData[accessCode][4];;
 			document.getElementById("useridImage").style.backgroundColor=userData[accessCode][5];;

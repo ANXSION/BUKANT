@@ -2,11 +2,13 @@ var bookId=0;
 var bookLog=["Book 1", "Author 1", 150] ["Book 2", "Author 2", 200];
 var currenttime= new Date()/1000;
 var loginStatus;
+var cartItemCount;
 var switchAccountId;
 
 var users=[["admin","admin","@admin","admin","admin@admin.localhost","red"],["bukant", "bukant","@BUKANT","Bukant", "www.bukant.com", "darkturquoise"]];
 localStorage.setItem("_users", JSON.stringify(users))
 localStorage.setItem("_usercount", "2");
+
 var level;
 
 if (localStorage.getItem("_loginStatus")){
@@ -20,9 +22,34 @@ else{
     localStorage.setItem("_email", "null");
     localStorage.setItem("_userimage", "NULL");
     loginStatus=localStorage.getItem("_loginStatus");
+    localStorage.setItem("_cartItemCount", "0");
 }
 
 var drawerStatus = false;
+
+
+
+function checkCart(){
+    cartItemCount= parseInt(localStorage.getItem("_cartItemCount"));
+    console.log(cartItemCount);
+    if (cartItemCount==0){
+        document.getElementById("cartCounter").style.display="none";
+    }
+    else if (cartItemCount>0&&cartItemCount<=9){
+        document.getElementById("cartCounter").style.display="flex";
+        document.getElementById("cartCounterDisplay").textContent=cartItemCount;
+    }
+    else if(cartItemCount>9){
+        localStorage.setItem("_cartItemCount", 9);
+        cartItemCount= parseInt(localStorage.getItem("_cartItemCount"));
+        document.getElementById("cartCounter").style.display="flex";
+        document.getElementById("cartCounterDisplay").textContent=cartItemCount;
+        document.getElementById("cartIconContainer").style.animation="cardNudge 1s";
+        setTimeout(function(){
+            document.getElementById("cartIconContainer").style.animation="none";
+        },1000)
+    }
+}
 
 function openDrawer(){
     if(drawerStatus==false){
@@ -46,7 +73,7 @@ function openDrawer(){
 function accessCart(level){
     var accessDirec;
     if(level==1){
-        accessDirec="/page/cart.html";
+        accessDirec="page/cart.html";
     }
     else if(level==2){
         accessDirec="cart.html";
@@ -62,12 +89,16 @@ function accessCart(level){
     }
 }
 
-function AddToCart(){
+function addToCart(){
     if (loginStatus=="false"){
-        accessCart();
+        document.getElementById("cartIconContainer").style.animation="cardNudge 1s";
+        setTimeout(function(){
+            document.getElementById("cartIconContainer").style.animation="none";
+        },1000)
     }
     else{
-        window.open("page/cart.html", "_parent");
+        localStorage.setItem("_cartItemCount", (cartItemCount+1));
+        checkCart();
     }
 }
 
@@ -160,4 +191,3 @@ function logout(){
     localStorage.setItem("_loginStatus","false");
     location.reload();
 }
-
