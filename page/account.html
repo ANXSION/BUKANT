@@ -35,7 +35,7 @@
 			<div id="menubar2"></div>
 		</div>
 		<p onclick="home(1)">BUKANT</p>
-		<div id="cartIconContainer" onclick="window.open('cart.html','_parent')">
+		<div id="cartIconContainer" onclick="accessCart()">
 			<div class="cartCounter">
 				<p id="cartCounterDisplay">1</p>
 			</div>
@@ -53,21 +53,19 @@
 
 	<main>
 		<section>
-			<div id="loginForm">
-				<h1>Welcome to BUKANT</h1>
-				<br>
-				<label for="username">Username:</label>
-				<input type="text" id="username" name="username"><br>
-				<label for="password">Password:</label>
-				<input type="password" id="password" name="password"><br>
-				<button class="accountButton" onclick="accessAccount()">Login</button>
-				<p onclick="switchAccount('register')"><u>New User? Register</u></p>
-				<p id="invalidUsername">* Your Username Does not exist.</p>
-				<p id="invalidPassword">* The password you entered is not correct.</p>
-			</div>
-		</section>
+		<div id="loginForm">
+			<h1>Welcome to BUKANT</h1>
+			<br>
+			<label for="username">Username:</label>
+			<input type="text" id="username" name="username"><br>
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password"><br>
+			<button class="accountButton" onclick="accessAccount()">Login</button>
+			<p onclick="switchAccount('register')"><u>New User? Register</u></p>
+			<p id="invalidUsername">* Your Username Does not exist.</p>
+			<p id="invalidPassword">* The password you entered is not correct.</p>
+		</div>
 
-		<section>
 			<div id="regForm">
 				<h1>Register New User</h1>
 				<br>
@@ -88,10 +86,8 @@
 				<p id="invalidRegUsername">* The username is already taken</p>
 				<p id="invalidRegPassword">* The password you entered did not match.</p>
 			</div>
-		</section>
 
-		<section id="loggedIn">
-			
+		<div id="loggedIn">
 			<div class="useridContainer">
 				<div class="useridContainerL">
 					<div id="useridImage"></div>
@@ -102,6 +98,12 @@
 				<div class="useridContainerR">
 					<p id="insertName"></p>
 					<p id="insertEmail"></p>
+					<div>
+						<div class="bookCount">
+							<p>Books Purchased</p>
+							<p id="booksOwned">10</p>
+						</div>
+					</div>
 				</div>
 			</div>
 
@@ -121,7 +123,8 @@
 					</div>
 				</div>
 			</section >
-		</section>	
+		</div>
+	</section>
 	</main>
 
 	<footer></footer>

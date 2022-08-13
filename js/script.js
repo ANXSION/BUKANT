@@ -43,7 +43,14 @@ function openDrawer(){
     }
 }
 
-function accessCart(){
+function accessCart(level){
+    var accessDirec;
+    if(level==1){
+        accessDirec="/page/cart.html";
+    }
+    else if(level==2){
+        accessDirec="cart.html";
+    }
     if (loginStatus=="false"){
         document.getElementById("cartIconContainer").style.animation="cardNudge 1s";
         setTimeout(function(){
@@ -51,7 +58,7 @@ function accessCart(){
         },1000)
     }
     else{
-        window.open("page/cart.html", "_parent");
+        window.open(accessDirec, "_parent");
     }
 }
 
@@ -78,6 +85,7 @@ function accessAccount(){
     var getUsername=document.getElementById("username").value;
     var getPassword=document.getElementById("password").value;
     var count=localStorage.getItem("_usercount");
+    var errusr=0, errpas=0;
 
     var Dat=JSON.parse(localStorage.getItem("_users"));
 
@@ -93,14 +101,22 @@ function accessAccount(){
                 localStorage.setItem("_loginStatus","true");
                 localStorage.setItem("_loginAccess",codei);
                 location.reload();
+                break;
             }
             else{
-                document.getElementById("invalidPassword").style.display="flex";
+                errpas=1;
+                break;
             }
         }
         else{
-            document.getElementById("invalidUsername").style.display="flex";
+            errusr=1;
         }
+    }
+    if(errusr==1){
+        document.getElementById("invalidUsername").style.display="flex";
+    }
+    else if (errusr==0&&errpas==1){
+        document.getElementById("invalidPassword").style.display="flex";
     }
 }
 
