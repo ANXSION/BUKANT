@@ -48,11 +48,39 @@
 	</nav>
 
 	<div id="categoriesMobile">
-		<p>Books +</p>
-		<p>Author +</p>
-		<p>About us +</p>
-		<p>Arts and Craft +</p>
-		<p onclick="window.open('account.html','_parent')">Account</p>
+		<div class="categoriesTitle">
+			<p onclick="collapse('booksCategory')">Books&nbsp;</p>
+			<p id="booksAdd">+</p>
+		</div>
+		<div id="booksCategory">
+			<p>Fiction</p>
+			<p>Non-Fiction</p>
+			<p>Children</p>
+			<p>Language based</p>
+		</div>
+
+		<p class="categoriesTitle">Authors</p>
+
+		<div class="categoriesTitle">
+			<p onclick="collapse('aboutCategory')">About us&nbsp;</p>
+			<p id="aboutAdd">+</p>
+		</div>
+		<div id="aboutCategory">
+			<p>About us</p>
+			<p>Work with us</p>
+			<p>Publish with us</p>
+		</div>
+
+		<div class="categoriesTitle">
+			<p onclick="collapse('artCategory')">Arts and Craft&nbsp;</p>
+			<p id="artAdd">+</p>
+		</div>
+		<div id="artCategory">
+			<p>Arts</p>
+			<p>Craft</p>
+		</div>
+
+		<p class="categoriesTitle" onclick="window.open('account.html','_parent')">Account</p>
 	</div>
 
 	<main>

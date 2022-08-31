@@ -2,7 +2,7 @@
 <html lang="en">
   
 <head>
-	<title>Bukant</title>
+	<title>login | BUKANT</title>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="author" content="AnxSion" />
@@ -44,11 +44,39 @@
 	</nav>
 
 	<div id="categoriesMobile">
-		<p>Books +</p>
-		<p>Author +</p>
-		<p>About us +</p>
-		<p>Arts and Craft +</p>
-		<p onclick="window.open('account.html','_parent')">Account</p>
+		<div class="categoriesTitle">
+			<p onclick="collapse('booksCategory')">Books&nbsp;</p>
+			<p id="booksAdd">+</p>
+		</div>
+		<div id="booksCategory">
+			<p>Fiction</p>
+			<p>Non-Fiction</p>
+			<p>Children</p>
+			<p>Language based</p>
+		</div>
+
+		<p class="categoriesTitle">Authors</p>
+
+		<div class="categoriesTitle">
+			<p onclick="collapse('aboutCategory')">About us&nbsp;</p>
+			<p id="aboutAdd">+</p>
+		</div>
+		<div id="aboutCategory">
+			<p>About us</p>
+			<p>Work with us</p>
+			<p>Publish with us</p>
+		</div>
+
+		<div class="categoriesTitle">
+			<p onclick="collapse('artCategory')">Arts and Craft&nbsp;</p>
+			<p id="artAdd">+</p>
+		</div>
+		<div id="artCategory">
+			<p>Arts</p>
+			<p>Craft</p>
+		</div>
+
+		<p class="categoriesTitle" onclick="window.open('account.html','_parent')">Account</p>
 	</div>
 
 	<main>
@@ -137,9 +165,10 @@
 			document.getElementById("loginForm").style.display="none";
 			document.getElementById("loggedIn").style.display="flex";
 			document.getElementById("insertUsername").textContent=userData[accessCode][2];
-			document.getElementById("insertName").textContent=userData[accessCode][3];;
-			document.getElementById("insertEmail").textContent=userData[accessCode][4];;
-			document.getElementById("useridImage").style.backgroundColor=userData[accessCode][5];;
+			document.getElementById("insertName").textContent=userData[accessCode][3];
+			document.getElementById("insertEmail").textContent=userData[accessCode][4];
+			document.getElementById("useridImage").style.backgroundColor=userData[accessCode][5];
+			document.title=userData[accessCode][3]+ "| BUKANT";
 		}
 		else{
 			document.getElementById("loginForm").style.display="flex";
@@ -148,6 +177,7 @@
 			document.getElementById("insertUsername").textContent=""
 			document.getElementById("insertName").textContent="";
 			document.getElementById("insertEmail").textContent="";
+			document.title="Login | BUKANT";
 		}
 	</script>
 </body>

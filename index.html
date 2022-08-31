@@ -45,17 +45,97 @@
 	</nav>
 
 	<div id="categoriesMobile">
-		<p>Books +</p>
-		<p>Author +</p>
-		<p>About us +</p>
-		<p>Arts and Craft +</p>
-		<p onclick="window.open('page/account.html','_parent')">Account</p>
+		<div class="categoriesTitle">
+			<p onclick="collapse('booksCategory')">Books&nbsp;</p>
+			<p id="booksAdd">+</p>
+		</div>
+		<div id="booksCategory">
+			<p>Fiction</p>
+			<p>Non-Fiction</p>
+			<p>Children</p>
+			<p>Language based</p>
+		</div>
+
+		<p class="categoriesTitle">Authors</p>
+
+		<div class="categoriesTitle">
+			<p onclick="collapse('aboutCategory')">About us&nbsp;</p>
+			<p id="aboutAdd">+</p>
+		</div>
+		<div id="aboutCategory">
+			<p>About us</p>
+			<p>Work with us</p>
+			<p>Publish with us</p>
+		</div>
+
+		<div class="categoriesTitle">
+			<p onclick="collapse('artCategory')">Arts and Craft&nbsp;</p>
+			<p id="artAdd">+</p>
+		</div>
+		<div id="artCategory">
+			<p>Arts</p>
+			<p>Craft</p>
+		</div>
+
+		<p class="categoriesTitle" onclick="window.open('page/account.html','_parent')">Account</p>
 	</div>
 
 	<main>
 		<section>
 			<h1>Featured Titles</h1>
 			<div class="rails">
+
+				<div class="card">
+					<div class="bookCover"></div>
+					<div class="bookDetail">
+						<div class="bookDetailAlpha">
+							<p>Rs. 150</p>
+						</div>
+						<div class="bookDetailBeta">
+							<button class="bookButton">View</button>
+							<button class="bookButton" onclick="addToCart()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="bookCover"></div>
+					<div class="bookDetail">
+						<div class="bookDetailAlpha">
+							<p>Rs. 150</p>
+						</div>
+						<div class="bookDetailBeta">
+							<button class="bookButton">View</button>
+							<button class="bookButton" onclick="addToCart()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="bookCover"></div>
+					<div class="bookDetail">
+						<div class="bookDetailAlpha">
+							<p>Rs. 150</p>
+						</div>
+						<div class="bookDetailBeta">
+							<button class="bookButton">View</button>
+							<button class="bookButton" onclick="addToCart()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="bookCover"></div>
+					<div class="bookDetail">
+						<div class="bookDetailAlpha">
+							<p>Rs. 150</p>
+						</div>
+						<div class="bookDetailBeta">
+							<button class="bookButton">View</button>
+							<button class="bookButton" onclick="addToCart()">Add to Cart</button>
+						</div>
+					</div>
+				</div>
 
 				<div class="card">
 					<div class="bookCover"></div>
