@@ -2,6 +2,6 @@
 Prototyping websites of BUKANT
 
 ## Projects initiated 
-- [ ] Eboo
+- [ ] Ebook
 - [ ] Website design
 - [ ] Ecommerce
