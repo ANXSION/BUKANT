@@ -234,6 +234,7 @@ section h1{
 
 .bookButton{
     line-height: 1rem;
+    height:1rem;
     margin: 0;
     width: 90%;
     margin-bottom: 8px;
