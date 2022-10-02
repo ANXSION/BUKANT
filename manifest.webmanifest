@@ -1,14 +1,14 @@
 {
 	"dir": "ltr",
 	"lang": "en",
-	"name": "ANXSION",
-	"short_name": "ANXSION",
+	"name": "Bukant",
+	"short_name": "Bukant",
 	"scope": "/",
 	"display": "standalone",
 	"start_url": "/",
 	"background_color": "#FFFFFF",
 	"theme_color": "black",
-	"description": "Description",
+	"description": "A Junction of Books, Arts & Craft",
 	"orientation": "any",
 	"prefer_related_applications": "false",
 	"icons":[{
