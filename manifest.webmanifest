@@ -12,14 +12,14 @@
 	"orientation": "any",
 	"prefer_related_applications": "false",
 	"icons":[{
-		"src": "image/pwa/",
-		"type": "image/png",
+		"src": "asset/pwa/",
+		"type": "asset/png",
 		"sizes": "192x192",
 		"purpose": "any maskable"
 	},
 	{
-		"src": "image/pwa/",
-		"type": "image/png",
+		"src": "asset/pwa/",
+		"type": "asset/png",
 		"sizes": "512x512",
 		"purpose": "any maskable"
 	}]
