@@ -218,7 +218,7 @@ section h1{
     min-width: 8.25rem;
     min-height: 13.2rem;
     border-radius: 8px;
-    background-color: darkturquoise;
+    background-color: var(--color-primary);
 }
 .bookDetail{
     width: 100%;
