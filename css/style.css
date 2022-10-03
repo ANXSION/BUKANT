@@ -245,7 +245,8 @@ section h1{
 }
 
 .bookButton{
-    height:1.8rem;
+    font-size: 0.875rem;
+    height:1.7rem;
     margin: 0;
     width: 90%;
     margin-bottom: 8px;
