@@ -93,7 +93,7 @@ function checkCart(){
             document.getElementById("cartCounterDisplay").textContent=cartItemCount;
         }
         else if(cartItemCount>9){
-            localStorage.setItem("_cartItemCount", "9+");
+            localStorage.setItem("_cartItemCount", 9);
             cartItemCount= parseInt(localStorage.getItem("_cartItemCount"));
             document.getElementById("cartCounter").style.display="flex";
             document.getElementById("cartCounterDisplay").textContent=cartItemCount;
