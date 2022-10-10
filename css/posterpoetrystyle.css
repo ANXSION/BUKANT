@@ -3,12 +3,13 @@
     justify-content:center;
     align-items: center;
     height: 64px;
-    width: 100%;
+    width: 80%;
     text-align: center;
     margin: 18px;
     cursor: pointer;
     transition: all 0.3s;
     font-size: 1rem;
+    border-radius: 6px;
 }
 
 .posterPoetry:hover{
@@ -29,6 +30,7 @@
 .posterPoetryContent{
     display: grid;
     grid-template-columns: auto;
+    width:80%
 }
 
 .posterPoetryContent img{
@@ -38,6 +40,9 @@
 
 
 @media screen and (min-width:769px){
+    .posterPoetry{
+        width: 60%;
+    }
     .posterPoetryContent{
         width: 80%;
         grid-template-columns: auto auto;
