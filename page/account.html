@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+<!-- Hand coded with love <3 by anxsion -->	
   
 <head>
 	<title>login | BUKANT</title>
@@ -44,10 +45,7 @@
 	</nav>
 
 	<div id="categoriesMobile">
-		<div class="categoriesTitle">
-			<p onclick="collapse('booksCategory')">Books&nbsp;</p>
-			<p id="booksAdd">+</p>
-		</div>
+		<p onclick="collapse('booksCategory')" class="categoriesTitle">Books +</p>
 		<div id="booksCategory">
 			<p>Fiction</p>
 			<p>Non-Fiction</p>
@@ -56,44 +54,40 @@
 			<p>Translations</p>
 		</div>
 
-		<p class="categoriesTitle">Authors</p>
-
-		<div class="categoriesTitle">
-			<p onclick="collapse('aboutCategory')">About us&nbsp;</p>
-			<p id="aboutAdd">+</p>
-		</div>
+		<p onclick="collapse('aboutCategory')" class="categoriesTitle">About Us +</p>
 		<div id="aboutCategory">
 			<p>About us</p>
 			<p>Work with us</p>
 			<p>Publish with us</p>
 		</div>
 
-		<div class="categoriesTitle">
-			<p onclick="collapse('artCategory')">Arts and Craft&nbsp;</p>
-			<p id="artAdd">+</p>
-		</div>
+		<p onclick="collapse('artCategory')" class="categoriesTitle">Arts and Craft +</p>
 		<div id="artCategory">
 			<p>Arts</p>
 			<p>Craft</p>
 		</div>
+
+		<p class="categoriesTitle">Authors</p>
+
+		<p class="categoriesTitle" onclick="window.open('blog.html','_parent')">Blog</p>
 
 		<p class="categoriesTitle" onclick="window.open('account.html','_parent')">Account</p>
 	</div>
 
 	<main>
 		<section>
-		<div id="loginForm">
-			<h1>Welcome to BUKANT</h1>
-			<br>
-			<label for="username">Username:</label>
-			<input type="text" id="username" name="username"><br>
-			<label for="password">Password:</label>
-			<input type="password" id="password" name="password"><br>
-			<button class="accountButton" onclick="accessAccount()">Login</button>
-			<p onclick="switchAccount('register')"><u>New User? Register</u></p>
-			<p id="invalidUsername">* Your Username Does not exist.</p>
-			<p id="invalidPassword">* The password you entered is not correct.</p>
-		</div>
+			<div id="loginForm">
+				<h1>Welcome to BUKANT</h1>
+				<br>
+				<label for="username">Username:</label>
+				<input type="text" id="username" name="username"><br>
+				<label for="password">Password:</label>
+				<input type="password" id="password" name="password"><br>
+				<button class="accountButton" onclick="accessAccount()">Login</button>
+				<p onclick="switchAccount('register')"><u>New User? Register</u></p>
+				<p id="invalidUsername">* Your Username Does not exist.</p>
+				<p id="invalidPassword">* The password you entered is not correct.</p>
+			</div>
 
 			<div id="regForm">
 				<h1>Register New User</h1>
@@ -116,44 +110,247 @@
 				<p id="invalidRegPassword">* The password you entered did not match.</p>
 			</div>
 
-		<div id="loggedIn">
-			<div class="useridContainer">
-				<div class="useridContainerL">
-					<div id="useridImage"></div>
-					<p id="insertUsername"></p>
-					<button class="accountButton" onclick="logout()">Logout</button>
-				</div>
-				
-				<div class="useridContainerR">
-					<p id="insertName"></p>
-					<p id="insertEmail"></p>
-					<div>
-						<div class="bookCount">
-							<p>Books Purchased</p>
-							<p id="booksOwned">9</p>
-						</div>
+			<div id="loggedIn">
+				<div class="useridContainer">
+					<div class="useridContainer">
+						<div id="useridImage"></div>
+						<p id="insertUsername"></p>
+						<button class="accountButton" onclick="logout()">Logout</button>
 					</div>
 				</div>
+
+				<section id="userTable">
+					<table  class="accountOrderTable">
+						<caption><h1>Book List</h1></caption>
+						<tr>
+							<tr>
+								<td rowspan="5">
+									<div class="Acard">
+										<img class="AbookCover" src="../asset/books/Sample"></img>
+									</div>
+								</td>
+								<th>Order Id</th>
+								<td>BO0910202211-1</td>
+							</tr>
+							<tr>
+								<th>Book name</th>
+								<td>Book 1</td>
+							</tr>
+							<tr>
+								<th>Author</th>
+								<td>Author 1</td>
+							</tr>
+							<tr>
+								<th>Order Date</th>
+								<td>9/10/2022</td>
+							</tr>
+							<tr>
+								<th>Total Amount</th>
+								<td>799</td>
+							</tr>
+						</tr>
+
+						<tr>
+							<tr>
+								<td rowspan="5">
+									<div class="Acard">
+										<img class="AbookCover" src="../asset/books/Sample"></img>
+									</div>
+								</td>
+								<th>Order Id</th>
+								<td>BO0910202211-1</td>
+							</tr>
+							<tr>
+								<th>Book name</th>
+								<td>Book 1</td>
+							</tr>
+							<tr>
+								<th>Author</th>
+								<td>Author 1</td>
+							</tr>
+							<tr>
+								<th>Order Date</th>
+								<td>9/10/2022</td>
+							</tr>
+							<tr>
+								<th>Total Amount</th>
+								<td>799</td>
+							</tr>
+						</tr>
+
+						<tr>
+							<tr>
+								<td rowspan="5">
+									<div class="Acard">
+										<img class="AbookCover" src="../asset/books/Sample"></img>
+									</div>
+								</td>
+								<th>Order Id</th>
+								<td>BO0910202211-1</td>
+							</tr>
+							<tr>
+								<th>Book name</th>
+								<td>Book 1</td>
+							</tr>
+							<tr>
+								<th>Author</th>
+								<td>Author 1</td>
+							</tr>
+							<tr>
+								<th>Order Date</th>
+								<td>9/10/2022</td>
+							</tr>
+							<tr>
+								<th>Total Amount</th>
+								<td>799</td>
+							</tr>
+						</tr>
+
+						<tr>
+							<tr>
+								<td rowspan="5">
+									<div class="Acard">
+										<img class="AbookCover" src="../asset/books/Sample"></img>
+									</div>
+								</td>
+								<th>Order Id</th>
+								<td>BO0910202211-1</td>
+							</tr>
+							<tr>
+								<th>Book name</th>
+								<td>Book 1</td>
+							</tr>
+							<tr>
+								<th>Author</th>
+								<td>Author 1</td>
+							</tr>
+							<tr>
+								<th>Order Date</th>
+								<td>9/10/2022</td>
+							</tr>
+							<tr>
+								<th>Total Amount</th>
+								<td>799</td>
+							</tr>
+						</tr>
+					</table>
+				</section>
+
+				<section id="adminTable">
+
+					<h1>Order Details</h1>
+
+					<table class="accountOrderTable">
+						<caption><h1>BO0910202211-1</h1></caption>
+						<tr>
+							<tr>
+								<td rowspan="9">
+									<ol>
+										<li>23525235</li>
+										<li>23452352</li>
+										<li>23452352</li>
+										<li>23452352</li>
+										<li>23452352</li>
+										<li>23452352</li>
+										<li>23452352</li>
+										<li>23452352</li>
+										<li>23452352</li>
+										<li>23452352</li>
+										<li>23452352</li>
+										<li>23452352</li>
+									</ol>
+								</td>
+								<th>Username</th>
+								<td>@Bukant</td>
+							</tr>
+							<tr>
+								<th>Book name</th>
+								<td>Book 1</td>
+							</tr>
+							<tr>
+								<th>Author</th>
+								<td>Author 1</td>
+							</tr>
+							<tr>
+								<th>Order Date</th>
+								<td>9/10/2022</td>
+							</tr>
+							<tr>
+								<th>Delivery Address</th>
+								<td>Salbari</td>
+							</tr>
+							<tr>
+								<th>Payment Method</th>
+								<td>COD</td>
+							</tr>
+							<tr>
+								<th>Total Amount</th>
+								<td>799</td>
+							</tr>
+							<tr>
+								<th>Status</th>
+								<td>Delivered</td>
+							</tr>
+						</tr>
+					</table>
+
+					<table class="accountOrderTable">
+						<caption><h1>BO0910202211-1</h1></caption>
+						<tr>
+							<tr>
+								<td rowspan="9">
+									<ol>
+										<li>23525235</li>
+										<li>23452352</li>
+										<li>23452352</li>
+										<li>23452352</li>
+										<li>23452352</li>
+										<li>23452352</li>
+										<li>23452352</li>
+										<li>23452352</li>
+										<li>23452352</li>
+										<li>23452352</li>
+										<li>23452352</li>
+										<li>23452352</li>
+									</ol>
+								</td>
+								<th>Username</th>
+								<td>@Bukant</td>
+							</tr>
+							<tr>
+								<th>Book name</th>
+								<td>Book 1</td>
+							</tr>
+							<tr>
+								<th>Author</th>
+								<td>Author 1</td>
+							</tr>
+							<tr>
+								<th>Order Date</th>
+								<td>9/10/2022</td>
+							</tr>
+							<tr>
+								<th>Delivery Address</th>
+								<td>Salbari</td>
+							</tr>
+							<tr>
+								<th>Payment Method</th>
+								<td>COD</td>
+							</tr>
+							<tr>
+								<th>Total Amount</th>
+								<td>799</td>
+							</tr>
+							<tr>
+								<th>Status</th>
+								<td>Delivered</td>
+							</tr>
+						</tr>
+					</table>
+
+				</section>
 			</div>
-
-			<section>
-				<h1>Read Your Ebook</h1>
-				<div class="rails">
-					<div class="ebook">
-						<div class="bookCover"></div>
-					</div>
-
-					<div class="ebook">
-						<div class="bookCover"></div>
-					</div>
-
-					<div class="ebook">
-						<div class="bookCover"></div>
-					</div>
-				</div>
-			</section >
-		</div>
-	</section>
+		</section>
 	</main>
 
 	<footer></footer>
@@ -162,22 +359,29 @@
 		var auth = localStorage.getItem("_loginStatus");
 		var accessCode=parseInt(localStorage.getItem("_loginAccess"));
 		var userData=JSON.parse(localStorage.getItem("_users"));
+		document.getElementById("userTable").style.display="none";
+		document.getElementById("adminTable").style.display="none";
 		if(auth=="true"){
 			document.getElementById("loginForm").style.display="none";
 			document.getElementById("loggedIn").style.display="flex";
 			document.getElementById("insertUsername").textContent=userData[accessCode][2];
-			document.getElementById("insertName").textContent=userData[accessCode][3];
-			document.getElementById("insertEmail").textContent=userData[accessCode][4];
-			document.getElementById("useridImage").style.backgroundColor=userData[accessCode][5];
-			document.title=userData[accessCode][3]+ "| BUKANT";
+			document.getElementById("useridImage").style.backgroundColor=userData[accessCode][3];
+			document.title=userData[accessCode][2]+ "| BUKANT";
+			console.log(userData[accessCode][2]);
+			if (userData[accessCode][2]=="@admin"){
+				document.getElementById("userTable").style.display="none";
+				document.getElementById("adminTable").style.display="flex";
+			}
+			else{
+				document.getElementById("userTable").style.display="flex";
+				document.getElementById("adminTable").style.display="none";
+			}
 		}
 		else{
 			document.getElementById("loginForm").style.display="flex";
 			document.getElementById("regForm").style.display="none";
 			document.getElementById("loggedIn").style.display="none";
-			document.getElementById("insertUsername").textContent=""
-			document.getElementById("insertName").textContent="";
-			document.getElementById("insertEmail").textContent="";
+			document.getElementById("insertUsername").textContent="";
 			document.title="Login | BUKANT";
 		}
 	</script>
