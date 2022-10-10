@@ -239,8 +239,8 @@ section h1{
     overflow-y: hidden;
 }
 .card{
-    min-width: 8.25rem;
-    min-height: 22.4rem;
+    min-width: 9.25rem;
+    min-height: 23.4rem;
     height: fit-content;
     margin: 12px;
     display: flex;
@@ -249,8 +249,8 @@ section h1{
     align-items: center;
 }
 .bookCover{
-    min-width: 8.25rem;
-    min-height: 13.2rem;
+    min-width: 9.25rem;
+    min-height: 14.2rem;
     border-radius: 8px;
     background-color: var(--color-primary);
 }

@@ -1,0 +1,45 @@
+.posterPoetry{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 64px;
+    width: 100%;
+    text-align: center;
+    margin: 18px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 1rem;
+}
+
+.posterPoetry:hover{
+    font-size: 1.125rem;
+}
+
+.episode1{
+    color: black;
+    background: rgb(158,252,139);
+    background: linear-gradient(111deg, rgba(158,252,139,1) 0%, rgba(148,183,233,1) 100%);
+}
+
+.tba{
+    color: white;
+    background: black;
+}
+
+.posterPoetryContent{
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.posterPoetryContent img{
+    width: 100%;
+    height: 100%;
+}
+
+
+@media screen and (min-width:769px){
+    .posterPoetryContent{
+        width: 80%;
+        grid-template-columns: auto auto;
+    }
+}
