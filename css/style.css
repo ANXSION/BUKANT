@@ -478,3 +478,24 @@ footer::before{
     border: 1px solid black;
     text-align: center;
 }
+
+.displayBanner{
+    background-color: var(--color-primary);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.displayBanner img{
+    width: 50%;
+    height: 50%;
+}
+
+@media screen and (min-width: 769px) {
+    .displayBanner{
+        width: 50%;
+    }
+}
