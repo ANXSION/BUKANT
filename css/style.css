@@ -17,6 +17,17 @@ h1{
     font-weight: normal;
 }
 
+.logo{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    height: 50%;
+    width: 50%;
+    cursor:pointer;
+}
 #body{
     height: 100%;
     width: 100%;
@@ -231,16 +242,14 @@ section h1{
 .rails{
     width: 100%;
     height: fit-content;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
     align-items:center ;
-    overflow-x: auto;
-    overflow-y: hidden;
 }
 .card{
-    min-width: 9.25rem;
-    min-height: 23.4rem;
+    min-width: 8.25rem;
+    min-height: 18.4rem;
     height: fit-content;
     margin: 12px;
     display: flex;
@@ -249,11 +258,21 @@ section h1{
     align-items: center;
 }
 .bookCover{
-    min-width: 9.25rem;
-    min-height: 14.2rem;
-    border-radius: 8px;
-    background-color: var(--color-primary);
+    width: 100%;
+    height: 100%;
 }
+.bookCoverDetails{
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (min-width:1024px) {
+    .bookCoverDetails{
+        width: 50%;
+        height: 50%;
+    }
+}
+
 .Acard{
     height: fit-content;
     margin: 12px;
@@ -341,8 +360,13 @@ footer::before{
         top: 0;
         left:0;
     }
-    nav p{
+    .logo{
         transform: rotate(-90deg);
+        width: 100%;
+    }
+    .logo img{
+        height: 100%;
+        width: 100%;
     }
     #categoriesMobile{
         height: 100%;
@@ -357,7 +381,7 @@ footer::before{
 
     .rails{
         display: grid;
-        grid-template-columns: auto auto auto auto auto;
+        grid-template-columns: auto auto auto auto;
         justify-content:space-around;
         align-items:center ;
         overflow: hidden;
