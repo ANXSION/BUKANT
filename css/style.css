@@ -358,12 +358,48 @@ section h1{
 .bookCoverDetails{
     width: 100%;
     height: 100%;
+    margin: 12px;
+}
+
+.authorRails{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    align-items:center ;
+}
+
+.authorCard{
+    width:100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.authorCover{
+    height: 9rem;
+    width: 9rem;
+}
+
+.authorCard p{
+    font-size: 1rem;
 }
 
 @media screen and (min-width:1024px) {
     .bookCoverDetails{
         width: 50%;
         height: 50%;
+    }
+    .authorCover{
+        width: 75%;
+        height: 75%;
+    }
+    .authorRails{
+        grid-template-columns: auto auto auto auto;
     }
 }
 
