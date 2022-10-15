@@ -23,7 +23,7 @@ h1{
 
 .bukantBanner{
     width: 100%;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     
@@ -31,7 +31,14 @@ h1{
 .bukantBanner img{
     width: 30%;
     margin: 12px;
+    pointer-events: none;
+    user-select: none;
     
+}
+
+#bukantexclusive{
+    background:rgba(255, 160, 122, 0.2);
+    border-radius: 6px;
 }
 
 .logo{
@@ -59,6 +66,10 @@ h1{
 @media screen and (min-width:1024px) {
     .bukantBanner{
         display: flex;
+    }
+    .bukantBanner img{
+        width: 10%;
+        
     }
     .logo{
         height: fit-content;
@@ -303,6 +314,8 @@ nav p{
     align-items:center;
     font-size: 1rem;
     text-decoration: underline;
+    user-select: none;
+    cursor: pointer;
 }
 #booksAdd, #aboutAdd, #artsAdd{
     transform: rotate(0deg);
@@ -351,6 +364,25 @@ section h1{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+.newarrival{
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 2;
+    font-size: 0.75rem;
+    background-color: red;
+    color: white;
+    padding: 1px;
+    line-height: 2rem;
+    border-radius: 6px;
+    width: 72px;
+    text-align: center;
+    height: 22px;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 .bookCover{
