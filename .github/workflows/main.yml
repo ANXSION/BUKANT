@@ -1,34 +1,19 @@
-name: Staging Deploy
-
-on:
-  push:
-    branches: [ main ]
+on: push
+name: 🚀 Deploy website on push
 jobs:
-  build:
+  web-deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
-        working-directory: ./
     steps:
-    - uses: actions/checkout@v2
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.3.2
       with:
-        fetch-depth: 2
-
-    - name: Install Composer Dependencies
-      run: composer install --prefer-dist --no-progress --no-suggest
-
-    - name: npm install
-      run: npm install
-
-    - name: npm run bundle
-      run: npm run bundle
-
-    - name: FTP Deploy
-      uses: SamKirkland/FTP-Deploy-Action@3.1.1
-      with:
-        ftp-server: ftp.1664532155313-sh.bigrock.in
-        ftp-username: bukant@bukant.in
-        ftp-password: bukant_pass2022
+        server: ftp.1664532155313-sh.bigrock.in
+        username: bukant@bukant.in
+        password: bukant_pass2022
+        protocol: ftps
         local-dir: ./
-        remote-dir: /public_html/www/bukant.in
+        remote-dir: public_html/www/bukant.in/
