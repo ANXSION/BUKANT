@@ -1,19 +1,17 @@
+name: Deploy via ftp
 on: push
-name: 🚀 Deploy website on push
 jobs:
-  web-deploy:
-    name: 🎉 Deploy
+  deploy:
+    name: Deploy
     runs-on: ubuntu-latest
     steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v2
-    
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.3.2
+    - uses: actions/checkout@v2
+    - name: Upload ftp
+      uses: sebastianpopp/ftp-action@releases/v2
       with:
-        server: ftp.1664532155313-sh.bigrock.in
-        username: bukant@bukant.in
-        password: bukant_pass2022
-        port: 21
-        local-dir: ./
-        server-dir: public_html/www/bukant.in/
+        host: ${{ secrets.FTPHOST }}
+        user: ${{ secrets.FTPUSER }}
+        password: ${{ secrets.FTPPASS }}
+        localDir: "./"
+        remoteDir: "public_html/www/bukant.in/"
+        options: "--delete --asci"
