@@ -1,17 +1,19 @@
-name: Deploy via ftp
-on: push
+name: CI -> Deploy to My website
+on:
+  push:
+    branches: main
 jobs:
-  deploy:
-    name: Deploy
+  build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Upload ftp
-      uses: sebastianpopp/ftp-action@releases/v2
-      with:
-        host: ${{ secrets.FTPHOST }}
-        user: ${{ secrets.FTPUSER }}
-        password: ${{ secrets.FTPPASS }}
-        localDir: "./"
-        remoteDir: "public_html/www/bukant.in/"
-        options: "--delete --asci"
+      - uses: actions/checkout@v2
+      # Here is the deployment action
+      - name: Upload via FTP
+        uses: airvzxf/ftp-deployment-action@latest
+        with:
+          server: "ftp.1664532155313-sh.bigrock.in"
+          user: "bukant@bukant.in"
+          password: "bukant_pass2022"
+          local_dir: "./"
+          remote_dir: "/public_html/www/bukant.in/"
+          delete: "false"
