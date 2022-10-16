@@ -11,6 +11,6 @@ jobs:
     - name: Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.2
       with:
-        server: ftp.samkirkland.com
-        username: myFtpUserName
-        password: ${{ secrets.ftp_password }}
+        server: ftp.1664532155313-sh.bigrock.in
+        username: bukant@bukant.in
+        password: bukant_pass2022
