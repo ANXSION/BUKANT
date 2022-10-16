@@ -16,4 +16,4 @@ jobs:
         password: bukant_pass2022
         protocol: ftps
         local-dir: ./
-        remote-dir: public_html/www/bukant.in/
+        server-dir: public_html/www/bukant.in/
