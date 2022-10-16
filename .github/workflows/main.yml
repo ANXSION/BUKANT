@@ -17,3 +17,4 @@ jobs:
           local_dir: "./"
           remote_dir: "/public_html/www/bukant.in"
           delete: "false"
+          ftp_ssl_allow: "true"
