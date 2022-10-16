@@ -15,5 +15,5 @@ jobs:
         username: bukant@bukant.in
         password: bukant_pass2022
         port: 21
-        local-dir: /
+        local-dir: ./
         server-dir: public_html/www/bukant.in/
