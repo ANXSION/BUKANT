@@ -15,5 +15,5 @@ jobs:
           user: "bukant@bukant.in"
           password: "bukant_pass2022"
           local_dir: "./"
-          remote_dir: "/public_html/www/bukant.in/"
+          remote_dir: "/public_html/www/bukant.in"
           delete: "false"
