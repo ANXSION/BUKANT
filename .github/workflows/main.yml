@@ -1,0 +1,17 @@
+- name: ftp-action
+  # You may pin to the exact commit or the version.
+  # uses: sebastianpopp/ftp-action@eb75c5cb29d23ee4a729720a27dfb66403cb0f6d
+  uses: sebastianpopp/ftp-action@v2.0.0
+  with:
+    # FTP host
+    host: ftp.1664532155313-sh.bigrock.in
+    # FTP user
+    user: bukant@bukant.in
+    # FTP password
+    password: bukant_pass2022
+    # Force SSL encryption
+    forceSsl: # optional, default is false
+    # Local directory
+    localDir: public_html/www/bukant.in/
+    # Remote directory
+    remoteDir: # optional, default is .
