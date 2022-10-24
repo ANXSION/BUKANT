@@ -3,22 +3,22 @@
 	"lang": "en",
 	"name": "Bukant",
 	"short_name": "Bukant",
-	"scope": "/",
+	"scope": "./",
 	"display": "standalone",
-	"start_url": "/",
+	"start_url": "./",
 	"background_color": "#FFFFFF",
 	"theme_color": "black",
 	"description": "A Junction of Books, Arts & Craft",
 	"orientation": "any",
 	"prefer_related_applications": "false",
 	"icons":[{
-		"src": "asset/pwa/",
+		"src": "asset/icon/pwa-192.png",
 		"type": "asset/png",
 		"sizes": "192x192",
 		"purpose": "any maskable"
 	},
 	{
-		"src": "asset/pwa/",
+		"src": "asset/icon/pwa-512.png",
 		"type": "asset/png",
 		"sizes": "512x512",
 		"purpose": "any maskable"

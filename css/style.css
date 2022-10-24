@@ -1,15 +1,37 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');*/
-
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Roboto:wght@300;400;500;700&display=swap');
 
 :root{
-    --color-primary: black;
-    --color-secondary: white;
-    --color-tertiary: rgb(135,206,235);
+    --color-primary: hsl(0,100%,0%);
+    --color-secondary: hsl(0,0%,100%);
+    --color-tertiary: hsl(197,71.4%,72.5%);
     --body-font-family: 'EB Garamond', serif;
-    --body-font-size:2rem;
+    --body-font-size:1rem;
     --body-font-weight:400;
     --body-line-height: 1.5;
+    --color-primary: ;
+    --color-on-primary: ;
+    --color-primary-container: ;
+    --color-on-primary-container: ;
+    --color-secondary: ;
+    --color-on-secondary: ;
+    --color-secondary-container: ;
+    --color-on-secondary-container: ;
+    --color-tertiary: ;
+    --color-on-tertiary: ;
+    --color-tertiary-container: ;
+    --color-on-tertiary-container: ;
+    --color-error: ;
+    --color-on-error: ;
+    --color-error-container: ;
+    --color-on-error-container: ;
+    --color-background: ;
+    --color-on-background: ;
+    --color-surface: ;
+    --color-on-surface: ;
+    --color-outline: ;
+    --color-surface-variant: ;
+    --color-on-surface-variant: ;
+
 }
 
 /*:-webkit-scrollbar{
@@ -50,7 +72,7 @@ h1{
     margin: 8px;
 }
 .logo img{
-    height: 100%;
+    height: 60%;
     width: fit-content;
     cursor:pointer;
 }
@@ -110,7 +132,7 @@ h1{
 
 nav{
     height: 48px;
-    background-color: var(--color-primary);
+    background-color: black;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -200,6 +222,13 @@ nav p{
     cursor: pointer;
 }
 
+@media screen and (min-width:1024px) {
+    .socialsIcons svg{
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
 #cartIconContainer{
     margin: 12px;
     display: flex;
@@ -272,10 +301,9 @@ nav p{
 }
 
 #categoriesMobile{
-    height: 100vh;
+    height: 100%;
     width: 100%;
-    margin-top: 48px;
-    margin-bottom: 48px;
+    padding-top: 48px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -288,6 +316,7 @@ nav p{
     left: 0;
     transition: all 0.3s;
     z-index: 2;
+    overflow-y: scroll;
 }
 .categoriesTitle{
     width: 50%;
@@ -393,8 +422,8 @@ section h1{
     max-height: 278px;
 }
 .bookCoverDetails{
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
     margin: 12px;
 }
 
@@ -437,8 +466,8 @@ section h1{
         height: 75%;
     }
     .bookCoverDetails{
-        width: 50%;
-        height: 50%;
+        width: 25%;
+        height: 25%;
     }
     .authorCover{
         width: 75%;
@@ -498,9 +527,14 @@ section h1{
     margin-bottom: 8px;
     border: none;
     border-radius: 22px;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     cursor: pointer;
+    transition: all 0.3s;
+}
+
+.bookButton:hover{
+    background-color: rgba(0, 0, 0, 1);
 }
 
 @keyframes cardNudge {
@@ -515,22 +549,33 @@ section h1{
   }
 
 footer{
-    height: 48px;
+    height: 96px;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
 }
-
-footer::before{
-    font-size: 0.875rem;
-    content: "Copyright \00a9   2022 BUKANT";
+footer h1{
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 1.125rem;
+    font-weight:400;
 }
+footer p{
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 0.75rem;
+}
+
+
+
 
 @media screen and (min-width:1024px) {
     nav{
         height: 100%;
-        background-color: black;
         width: 48px;
         flex-direction: column;
         justify-content: space-between;

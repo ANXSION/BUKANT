@@ -1,0 +1,25 @@
+.blogCategoriesContainer{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 12px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.bookCategoriesButton{
+    font-size: 0.75rem;
+    height:1.7rem;
+    margin: 0;
+    width: 128px;
+    border: none;
+    border-radius: 22px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.bookCategoriesButton:hover{
+    background-color: rgba(0, 0, 0, 1);
+}

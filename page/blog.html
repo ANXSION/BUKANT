@@ -8,22 +8,28 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="author" content="AnxSion" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="description" content="The prototype website of the Bukant." />
-	<meta name="twitter:card" content="summary" />
+	<meta name="description" content="A Junction of Books, Arts & Craft" />
 	<meta name="twitter:creator" content="@anxsion" />
 	<meta name="theme-color" content="white" />
 	<meta name="msapplication-navbutton-color" content="white" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="white" />
-	<meta property="og:title" content="Bukant" />
-	<meta property="og:site_name" content="Bukant" />
-	<meta property="og:type" content="website" />
-	<meta property="og:image" content="image/" />
-	<meta property="og:url" content="BUKANT" />
-	<meta property="og:description" content="The prototype website of the Bukant." />
+	<meta property="og:url" content="http://www.bukant.in">
+  	<meta property="og:type" content="website">
+  	<meta property="og:title" content="Bukant">
+  	<meta property="og:description" content="A Junction of Books, Arts & Craft">
+  	<meta property="og:image" content="http://www.bukant.in/asset/banner/logoBanner2.png">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta property="twitter:domain" content="bukant.in">
+	<meta property="twitter:url" content="http://www.bukant.in">
+	<meta name="twitter:title" content="Bukant">
+	<meta name="twitter:description" content="A Junction of Books, Arts & Craft">
+	<meta name="twitter:image" content="http://www.bukant.in/asset/banner/logoBanner2.png">
 	<link rel="canonical" href="https://www.bukant.com/" />
 	<link rel="manifest" href="manifest.webmanifest" />
 	<link rel="stylesheet" href="../css/style.css" type="text/css" />
 	<link rel="preload" href="../css/style.css" as="style" />
+	<link rel="stylesheet" href="../css/blog.css" type="text/css" />
+	<link rel="preload" href="../css/blog.css" as="style" />
 	<link rel="shortcut icon" href="image/" type="image/x-icon" />
 	<link rel="apple-touch-icon" href="image/" />
 	<script src="../js/script.js"></script>
@@ -72,7 +78,7 @@
 			<p>Craft</p>
 		</div>
 
-		<p class="categoriesTitle">Authors</p>
+		<p class="categoriesTitle" onclick="window.open('author.html','_parent')">Authors</p>
 
 		<p class="categoriesTitle" onclick="window.open('poster.html','_parent')">Poster Kavita</p>
 
@@ -84,6 +90,16 @@
 	<main>
 		<section>
 			<h1>Bukant Blog</h1>
+			<div class="blogCategoriesContainer">
+				<button class="bookCategoriesButton" onclick="addToCart()">All</button>
+				<button class="bookCategoriesButton" onclick="addToCart()">Poetry</button>
+				<button class="bookCategoriesButton" onclick="addToCart()">Essay</button>
+				<button class="bookCategoriesButton" onclick="addToCart()">Fiction</button>
+				<button class="bookCategoriesButton" onclick="addToCart()">Book Review</button>
+				<button class="bookCategoriesButton" onclick="addToCart()">Flim</button>
+				<button class="bookCategoriesButton" onclick="addToCart()">Art</button>
+				<button class="bookCategoriesButton" onclick="addToCart()">Music</button>
+			</div>
 		</section>
 	</main>
 
